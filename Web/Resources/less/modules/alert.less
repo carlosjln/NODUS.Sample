@@ -1,0 +1,120 @@
+// ALERT
+// ===================================================================
+
+@import "../partials/mixins.less";
+@import "../partials/variables.less";
+@import "helper.less";
+
+.alert-stack {
+	.alert {
+		margin-bottom: 20px;
+	}
+}
+
+.alert {
+	overflow: hidden;
+
+	position: relative;
+	border: 1px solid transparent;
+
+	font-size: 14px;
+	line-height: 25px;
+	
+	.default-radius;
+
+	h4 {
+		margin-top: 0;
+		color: inherit;
+	}
+
+	> p,
+	> ul {
+		margin-bottom: 0;
+	}
+
+	> p + p {
+		margin-top: 5px;
+	}
+	
+	strong {
+		font-weight: bold;
+	}
+
+	.message {
+		overflow: hidden;
+		text-align: left;
+		margin: 5px 10px;
+	}
+
+	.spaced {
+		margin: 15px;
+	}
+
+	.alert-link {
+		font-weight: bold;
+	}
+
+	.close {
+		float: right;
+		width: 25px;
+
+		margin: 4px 5px 0 0;
+
+		color: #000;
+		font-size: 24px;
+		
+		.set-opacity( 0.2 );
+	}
+
+	.close:hover,
+	.close:focus {
+		text-decoration: none;
+		cursor: pointer;
+		
+		.set-opacity( 0.5 );
+	}
+}
+
+.alert-dismissable {
+	// padding-right: 35px;
+
+	
+}
+
+.alert-success {
+	.alert-variant( @state-success-text, @state-success-bg );
+}
+
+.alert-info {
+	.alert-variant( @state-info-text, @state-info-bg );
+}
+
+.alert-warning {
+	.alert-variant( @state-warning-text, @state-warning-bg );
+}
+
+.alert-danger {
+	.alert-variant( @state-danger-text, @state-danger-bg );
+}
+
+// .alert-default {
+//	.alert-variant( @state-danger-text, @state-danger-bg );
+// }
+
+// Buttons variants
+// ===================================================================
+.alert-variant( @color, @background ) {
+	@border: darken( spin(@background, -10), 10% );
+
+	color: @color;
+	background-color: @background;
+	border-color: @border;
+	
+	hr {
+		border-top-color: @border;
+	}
+	
+	.alert-link {
+		color: darken( @color, 5% );
+	}
+}

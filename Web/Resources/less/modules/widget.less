@@ -1,0 +1,90 @@
+﻿@import "../partials/mixins.less";
+
+.widget {
+	width: auto;
+	min-height: 200px;
+	
+	overflow: hidden;
+	position: relative;
+
+	background-color: #FFF;
+	border: 1px solid #D5D5D5;
+	
+	margin-left: 25px;
+
+	.set-radius(2px);
+
+	&:extend(.inline-block);
+
+	.widget-header {
+		height: 40px;
+		line-height: 38px;
+		
+		border-bottom: 1px solid #D5D5D5;
+		position: relative;
+		
+		background-color: #36A9E1;
+		
+		h2 {
+			float: left;
+			line-height: 40px;
+
+			color: #FFF;
+			margin: 0 0 0 13px;
+			
+			&:extend(.inline-block);
+
+			i {
+				font-size: 14px;
+				float: left;
+				margin: 13px 9px 0 0;
+			}
+		}
+
+		.widget-controls {
+			float: right;
+			margin-right: 10px;
+		}
+	}
+
+	.widget-content {
+		margin: 15px;
+		overflow: hidden;
+	}
+
+	.widget-footer {
+		width: 100%;
+		position: relative;
+		
+		border-top: 1px solid #D5D5D5;
+		background-color: #E9E9E9;
+
+		.widget-controls {
+			float: left;
+			margin-left: 10px;
+		}
+	}
+
+	.widget-controls {
+		
+	}
+}
+
+.widget.white {
+	.widget-header {
+		background-color: #FFF;
+		
+		h2 {
+			color: #383E4B;
+		}
+	}
+}
+
+.widget.borderless {
+	border: none;
+}
+
+.widget.shadowed {
+	border: none;
+	box-shadow: 0 1px 0 1px #E4E6EB;
+}

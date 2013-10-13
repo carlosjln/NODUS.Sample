@@ -1,0 +1,115 @@
+// BOX WIDGET
+// ===================================================================
+
+@import "../partials/mixins.less";
+@header-height: 40px;
+
+.box {
+	overflow: hidden;
+	.set-radius( 3px );
+
+	.box-header {
+		height: @header-height;
+
+		color: #FFF;
+		font-size: 16px;
+		background-color: #36A9E1;
+		
+		overflow: hidden;
+		
+		.set-top-radius( 3px );
+
+		i {
+			font-size: 18px;
+		}
+
+		h2 {
+			float: left;
+			margin: 0 0 0 10px;
+			line-height: 40px;
+
+			i {
+				margin-right: 5px;
+			}
+		}
+
+		.box-icon {
+			float: right;
+			
+			a {
+				float: left;
+				width: 36px;
+				height: 36px;
+				line-height: 35px;
+
+				margin: 2px 4px 0 0;
+				text-align: center;
+
+				&:hover {
+					background-color: #1E8FC6;
+					.set-radius(2px);
+				}
+
+				i {
+					color: white;
+					.set-opacity(0.8);
+
+					&:hover {
+						.set-opacity(1);
+					}
+				}
+			}
+		}
+	}
+
+	.box-body {
+		background-color: #FFF;
+		.stretch(@header-height, 0, 0, 0);
+
+		.box-content {
+			margin: 10px;
+			overflow: hidden;
+			.stretch;
+		}
+	}
+
+	.form-actions {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		
+		margin: 0;
+	}
+
+	// this exist so that one does not have to add the .clearfix class to every
+	// box-body or box-content
+	.box-body:before,
+	.box-body:after,
+	.box-content:before,
+	.box-content:after {
+		display: table;
+		content: "";
+		line-height: 0;
+	}
+	.box-body:after,
+	.box-content:after {
+		clear: both;
+	}
+}
+
+.box.shadowed {
+	border: 1px solid #E4E6EB;
+	.set-shadow( 0px 0px 3px 1px #E4E6EB );
+}
+
+.box.white {
+	.box-header {
+		background-color: #FFF;
+		border-bottom: 1px solid #E4E6EB;
+
+		h2 {
+			color: #383E4B;
+		}
+	}
+}

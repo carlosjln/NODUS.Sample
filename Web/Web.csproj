@@ -38,56 +38,190 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxMin">
+    <Reference Include="AjaxMin, Version=4.96.4941.15381, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AjaxMin.4.96.4941.15389\lib\net40\AjaxMin.dll</HintPath>
     </Reference>
-    <Reference Include="Dummy.Extensions">
+    <Reference Include="Dummy.Extensions, Version=1.0.0.42798, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Dummy.Extensions.1.0.2\lib\net40\Dummy.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Mongo.Entity">
+    <Reference Include="Mongo.Entity, Version=1.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Mongo.Entity.1.0.1.1\lib\net40\Mongo.Entity.dll</HintPath>
     </Reference>
-    <Reference Include="MongoDB.Bson">
+    <Reference Include="MongoDB.Bson, Version=1.8.3.9, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\mongocsharpdriver.1.8.3\lib\net35\MongoDB.Bson.dll</HintPath>
     </Reference>
-    <Reference Include="MongoDB.Driver">
+    <Reference Include="MongoDB.Driver, Version=1.8.3.9, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\mongocsharpdriver.1.8.3\lib\net35\MongoDB.Driver.dll</HintPath>
     </Reference>
-    <Reference Include="NODUS">
+    <Reference Include="NODUS, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NODUS.1.0.0.2\lib\net40\NODUS.dll</HintPath>
     </Reference>
-    <Reference Include="SpecExpress">
+    <Reference Include="SpecExpress, Version=1.6.1.56, Culture=neutral, PublicKeyToken=76939f3daa87791a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\SpecExpress.1.6.1.56\lib\SpecExpress.dll</HintPath>
     </Reference>
-    <Reference Include="StructureMap">
+    <Reference Include="StructureMap, Version=2.6.4.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="global.asax" />
+    <Content Include="index.aspx" />
+    <Content Include="Resources\css\index.css" />
+    <Content Include="Resources\img\app-logo-01.png" />
+    <Content Include="Resources\img\app-logo-02.png" />
+    <Content Include="Resources\img\app-logo.png" />
+    <Content Include="Resources\img\icon-loading.gif" />
+    <Content Include="Resources\img\login-bg.jpg" />
+    <Content Include="Resources\js\BASE64.js" />
+    <Content Include="Resources\js\BASE64.min.js" />
+    <Content Include="Resources\js\cerberus.js" />
+    <Content Include="Resources\js\Copy of cerberus.js" />
+    <Content Include="Resources\js\nodus.application.jquery.js" />
+    <Content Include="Resources\js\nodus.application.settings.js" />
+    <Content Include="Resources\js\nodus.js" />
+    <Content Include="Resources\js\nodus.min.js" />
+    <Content Include="Resources\js\nodus.prototypes.js" />
+    <Content Include="Resources\js\nodus.prototypes.min.js" />
+    <Content Include="Resources\js\SHA256.js" />
+    <Content Include="Resources\js\SHA256.min.js" />
+    <Content Include="Resources\plugin\alert\alert.js" />
+    <Content Include="Resources\plugin\autocomplete\jquery.autocomplete.css" />
+    <Content Include="Resources\plugin\autocomplete\jquery.autocomplete.js" />
+    <Content Include="Resources\plugin\dropdown\dropdown.js" />
+    <Content Include="Resources\plugin\dropdown\js-dropdown.js" />
+    <Content Include="Resources\plugin\font-awesome\css\font-awesome-ie7.css" />
+    <Content Include="Resources\plugin\font-awesome\css\font-awesome-ie7.min.css" />
+    <Content Include="Resources\plugin\font-awesome\css\font-awesome.css" />
+    <Content Include="Resources\plugin\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Resources\plugin\g.raphael\g.bar.js" />
+    <Content Include="Resources\plugin\g.raphael\g.dot.js" />
+    <Content Include="Resources\plugin\g.raphael\g.line.js" />
+    <Content Include="Resources\plugin\g.raphael\g.pie-fixed.js" />
+    <Content Include="Resources\plugin\g.raphael\g.pie-fixed.min.js" />
+    <Content Include="Resources\plugin\g.raphael\g.pie.js" />
+    <Content Include="Resources\plugin\g.raphael\g.raphael.js" />
+    <Content Include="Resources\plugin\g.raphael\g.raphael.min.js" />
+    <Content Include="Resources\plugin\g.raphael\min\g.bar-min.js" />
+    <Content Include="Resources\plugin\g.raphael\min\g.dot-min.js" />
+    <Content Include="Resources\plugin\g.raphael\min\g.line-min.js" />
+    <Content Include="Resources\plugin\g.raphael\min\g.pie-min.js" />
+    <Content Include="Resources\plugin\g.raphael\min\g.raphael-min.js" />
+    <Content Include="Resources\plugin\g.raphael\raphael.js" />
+    <Content Include="Resources\plugin\g.raphael\raphael.min.js" />
+    <Content Include="Resources\plugin\handlebars\handlebars.js" />
+    <Content Include="Resources\plugin\handlebars\handlebars.min.js" />
+    <Content Include="Resources\plugin\handlebars\handlebars.runtime.js" />
+    <Content Include="Resources\plugin\hint\hint.css" />
+    <Content Include="Resources\plugin\hint\hint.min.css" />
+    <Content Include="Resources\plugin\html5\excanvas.compiled.js" />
+    <Content Include="Resources\plugin\html5\flashcanvas.js" />
+    <Content Include="Resources\plugin\html5\flashcanvas.swf" />
+    <Content Include="Resources\js\BASE64.min.js.map" />
+    <Content Include="Resources\js\nodus.min.js.map" />
+    <Content Include="Resources\js\nodus.prototypes.min.js.map" />
+    <Content Include="Resources\js\SHA256.min.js.map" />
+    <Content Include="packages.config" />
+    <None Include="Resources\plugin\jquery\jquery-1.7.1-vsdoc.js" />
+    <Content Include="Resources\plugin\jquery\jquery-1.7.1.js" />
+    <Content Include="Resources\plugin\jquery\jquery-1.7.1.min.js" />
+    <Content Include="Resources\plugin\jquery\jquery-ui-1.8.20.js" />
+    <Content Include="Resources\plugin\jquery\jquery-ui-1.8.20.min.js" />
+    <Content Include="Resources\plugin\jquery\jquery.unobtrusive-ajax.js" />
+    <Content Include="Resources\plugin\jquery\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Resources\plugin\jquery\jquery.validate-vsdoc.js" />
+    <Content Include="Resources\plugin\jquery\jquery.validate.js" />
+    <Content Include="Resources\plugin\jquery\jquery.validate.min.js" />
+    <Content Include="Resources\plugin\jquery\jquery.validate.unobtrusive.js" />
+    <Content Include="Resources\plugin\jquery\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Screens\default_handlers.js" />
+    <Content Include="Screens\User\Dashboard\dashboard_action_handlers.js" />
+    <Content Include="Screens\User\Dashboard\templates\main\main.aspx" />
+    <Content Include="Screens\User\Dashboard\templates\main\main.css" />
+    <Content Include="Screens\User\Login\login_action_handlers.js" />
+    <Content Include="Screens\User\Login\templates\main\main.aspx" />
+    <Content Include="Screens\User\Login\templates\main\main.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="global.asax.cs">
+      <DependentUpon>global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\User\Dashboard\templates\main\main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Screens\User\Login\templates\main\main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="Screens\User\Dashboard\templates\main\main.less" />
+    <Content Include="Screens\User\Login\templates\main\main.less" />
+    <Content Include="Resources\less\modules\box.less" />
+    <Content Include="Resources\less\modules\buttons.less" />
+    <Content Include="Resources\less\modules\form-elements.less" />
+    <Content Include="Resources\less\modules\helper.less" />
+    <Content Include="Resources\less\modules\menu-bar.less" />
+    <Content Include="Resources\less\modules\modal-box.less" />
+    <Content Include="Resources\less\modules\pagination.less" />
+    <Content Include="Resources\less\modules\reset.less" />
+    <Content Include="Resources\less\modules\tables.less" />
+    <Content Include="Resources\less\modules\tooltip.less" />
+    <Content Include="Resources\less\modules\widget.less" />
+    <Content Include="Resources\less\partials\mixins.less" />
+    <Content Include="Resources\less\partials\variables.less" />
+    <Content Include="Resources\fonts\lato-light.ttf" />
+    <Content Include="Resources\fonts\lato-light.woff" />
+    <Content Include="Resources\fonts\lato-regular.ttf" />
+    <Content Include="Resources\fonts\lato-regular.woff" />
+    <Content Include="Resources\less\modules\action-bar.less" />
+    <Content Include="Resources\less\modules\alert.less" />
+    <Content Include="Resources\less\modules\badge.less" />
+    <Content Include="Resources\less\modules\dropdown.less" />
+    <Content Include="Resources\less\index.less" />
+    <Content Include="Resources\plugin\alert\alert.ts" />
+    <Content Include="Resources\plugin\dropdown\dropdown.less" />
+    <Content Include="Resources\plugin\dropdown\dropdown.ts" />
+    <Content Include="Resources\plugin\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="Resources\plugin\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="Resources\plugin\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="Resources\plugin\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="Resources\plugin\font-awesome\font\FontAwesome.otf" />
+    <Content Include="Resources\plugin\font-awesome\less\bootstrap.less" />
+    <Content Include="Resources\plugin\font-awesome\less\core.less" />
+    <Content Include="Resources\plugin\font-awesome\less\extras.less" />
+    <Content Include="Resources\plugin\font-awesome\less\font-awesome-ie7.less" />
+    <Content Include="Resources\plugin\font-awesome\less\font-awesome.less" />
+    <Content Include="Resources\plugin\font-awesome\less\icons.less" />
+    <Content Include="Resources\plugin\font-awesome\less\mixins.less" />
+    <Content Include="Resources\plugin\font-awesome\less\path.less" />
+    <Content Include="Resources\plugin\font-awesome\less\variables.less" />
+    <Content Include="Resources\plugin\g.raphael\g.pie-fixed.min.js.map" />
+    <Content Include="Resources\plugin\g.raphael\g.raphael.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -101,6 +235,9 @@
       <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\less\pages\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -112,15 +249,14 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>3205</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:1085/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://local.nodus.sample/</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>

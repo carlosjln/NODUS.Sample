@@ -1,0 +1,50 @@
+﻿@import "../modules/helper.less";
+// lighten(#383E4B, 20%)
+
+@bgcolor: #383E4B;
+
+.pagination {
+	display: block;
+	overflow: hidden;
+
+	li {
+		float: left;
+		font-size: 13px;
+		list-style: none;
+
+		&:first-child > a {
+			.set-left-radius(4px);
+			border-left-width: 1px;
+		}
+
+		&:last-child > a {
+			.set-right-radius(4px);
+		}
+	}
+
+	a {
+		display: block;
+		padding: 4px 12px 5px;
+		
+		cursor: pointer;
+		
+		background-color: #FFF;
+		border: 1px solid lighten(@bgcolor, 50%);
+		border-left-width: 0;
+		
+		text-decoration: none;
+
+		&:hover {
+			color: #000;
+			background-color: lighten(@bgcolor, 62%);
+		}
+	}
+
+	a.active {
+		background-color: lighten(@bgcolor, 62%);
+		border-bottom: 1px solid #0076a3;
+
+		color: lighten(#000, 25%);
+		font-weight: bold;
+	}
+}

@@ -1,0 +1,42 @@
+﻿@import "helper.less";
+
+.action-bar {
+//	overflow: hidden;
+
+	> li {
+		display: block;
+		position: relative;
+		
+		i {
+			.inline-block;
+		}
+		
+		> a {
+			font-size: 14px;
+			
+			display: block;
+			position: relative;
+			padding: 10px 15px;
+		}
+		
+		.action-bar {
+			display: none;
+			
+			margin: 0 10px 10px 10px;
+			
+			li:last-child {
+				margin-bottom: 0;
+			}
+			
+			a {
+				padding: 10px 15px 10px 25px !important;
+			}
+		}
+	}
+}
+
+.action-bar.vertical {
+	li {
+		float: left;
+	}
+}

@@ -1,0 +1,164 @@
+﻿@import "../../../../../Resources/less/partials/mixins.less";
+@import "../../../../../Resources/less/partials/variables.less";
+
+html {
+	background: none;
+}
+
+// Header Section
+// ===================================================================
+.header-bar {
+	background-color: @brand-primary;
+
+	.container {
+		height: @header-height;
+		margin: 0 15px;
+	}
+
+	.brand {
+		float: left;
+		margin-left: -15px;
+
+		width: @left-sidebar-width;
+		height: @header-height;
+		line-height: 35px;
+
+		color: #FFF;
+		font-size: 18px;
+		text-align: center;
+
+		background-color: @brand-primary-darker;
+
+		i {
+			margin-right: 5px;
+		}
+	}
+
+	.action-bar {
+		float: right;
+
+		li {
+			i {
+				font-size: 20px;
+			}
+
+			a {
+				height: @header-height;
+				
+				padding: 8px 15px;
+
+				color: #FFF;
+
+				&:hover {
+					background-color: @brand-primary-darker;
+				}
+			}
+		}
+	}
+}
+
+.left-sidebar {
+	width: @left-sidebar-width;
+	background-color: @charade-light;
+	
+	.stretch;
+	top: @header-height;
+
+	&:extend(.clear-fix);
+
+	.action-bar {
+		margin-top: 20px;
+
+		li {
+			margin-bottom: 1px;
+
+			&.active-tab a,
+			&:hover a{
+				background-color: @charade;
+			}
+
+			a {
+				font-size: 16px;
+				letter-spacing: 1px;
+				color: #FFF;
+
+				i {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+.main-container {
+	overflow: hidden;
+
+	background-color: #fff;
+
+	.stretch(@header-height, 0px, 0px, @left-sidebar-width);
+
+	.container {
+		overflow: hidden;
+	}
+
+	.tab-content {
+		display: none;
+	}
+
+	.active-container {
+		display: block;
+	}
+
+	.content {
+		margin: 25px;
+		overflow: hidden;
+
+		.stretch;
+	}
+}
+
+
+form {
+	.field {
+		.cedula {
+			input {
+				text-align: center;
+			}
+
+			span {
+				width: 10px;
+				text-align: center;
+				&:extend(.inline-block);
+			}
+
+			input[name=municipio] {
+				width: 40px;
+				margin-right: 0px;
+			}
+
+			input[name=secuencia] {
+				width: 85px;
+				margin: 0;
+			}
+
+			input[name=verificador] {
+				width: 30px;
+				margin-left: 0;
+			}
+		}
+
+		i {
+			color: #999999;
+			margin-left: 10px;
+		}
+
+		button {
+			margin-left: 10px;
+
+			i {
+				vertical-align: top;
+				margin: 0 5px 0 0;
+			}
+		}
+	}
+}

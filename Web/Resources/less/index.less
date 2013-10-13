@@ -1,0 +1,61 @@
+﻿// HELPERS
+@import "modules/reset.less";
+@import "modules/helper.less";
+
+@import "modules/form-elements.less";
+@import "modules/buttons.less";
+
+@import "modules/box.less";
+@import "modules/modal-box.less";
+@import "modules/tables.less";
+@import "modules/action-bar.less";
+@import "modules/pagination.less";
+@import "modules/dropdown.less";
+
+@import "modules/alert.less";
+@import "modules/badge.less";
+
+// PARTIALS
+@import "partials/mixins.less";
+@import "partials/variables.less";
+
+@font-face {
+	font-family: 'lato-light';
+	font-style: normal;
+	font-weight: 300;
+	src:url("/resources/fonts/lato-light.woff") format('woff'),
+		url("/resources/fonts/lato-light.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: 'lato-regular';
+	font-style: normal;
+	font-weight: 400;
+	src:url("/resources/fonts/lato-regular.woff") format('woff'),
+		url("/resources/fonts/lato-regular.ttf") format('truetype');
+}
+
+html {
+	@img: '../img/login-bg.jpg';
+
+	background: url(@img) no-repeat center center fixed;
+	
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{img}', sizingMethod='scale')";
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='@{img}', sizingMethod='scale');
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	font-family: 'lato-regular', sans-serif;
+	color: @charade-light;
+
+	a {
+		color: @brand-primary;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}

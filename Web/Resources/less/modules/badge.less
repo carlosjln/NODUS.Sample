@@ -1,0 +1,43 @@
+// BADGE
+// ===================================================================
+
+@import "../partials/mixins.less";
+@import "../partials/variables.less";
+
+.label,
+.badge {
+	color: #FFF;
+	font-family: 'Lato', sans-serif;
+	padding: 3px 6px;
+	
+	.set-shadow( none );
+	.set-radius( 2px );
+}
+
+.badge-default {
+	background-color: @gray-light;
+}
+
+.badge-success,
+.badge-success[ href ] {
+	background: #78cd51;
+	// background: @brand-success;
+}
+
+.badge-warning,
+.badge-warning[ href ] {
+	background: #fabb3d;
+	// background: @brand-warning;
+}
+
+.badge-danger,
+.badge-danger[ href ] {
+	// background: #ff5454;
+	background: @brand-danger;
+}
+
+.badge-info,
+.badge-info[ href ] {
+	// background: #67c2ef;
+	background: @brand-info;
+}

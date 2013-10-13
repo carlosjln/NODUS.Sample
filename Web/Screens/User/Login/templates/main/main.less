@@ -1,0 +1,125 @@
+﻿@import "../../../../../Resources/less/partials/mixins.less";
+
+@login-width: 400px;
+@form-width: @login-width - 80px;
+
+#login {
+	width: @login-width;
+	height: 245px;
+
+	margin: -150px 0 0 -200px;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	
+	background-color: rgba(255, 255, 255, 0.65);
+
+	.set-radius();
+	.set-shadow( 0 0 6px 2px rgba(0, 0, 0, 0.1) );
+
+	.app-logo {
+		display: block;
+		width: 300px;
+		height: 135px;
+
+		position: absolute;
+		top: -160px;
+		left: 50%;
+		margin-left: -150px;
+	}
+
+	fieldset {
+		margin: 0;
+	}
+
+	form {
+		width: @form-width;
+		height: 170px;
+		margin: 40px 0 0 40px;
+
+		h6 {
+			color: #2f4351;
+			font-size: 18px;
+			font-weight: 600;
+			text-align: center;
+
+			margin: 0 0 30px;
+		}
+	}
+
+	.input {
+		display: block;
+		width: @form-width;
+		margin-bottom: 12px;
+
+		input {
+			width: @form-width - 10px;
+			height: 38px;
+		}
+	}
+
+	#action-buttons {
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.request-status {
+		display: none;
+	}
+
+	// class: .btn,  color theme: ultraviolet rays
+	.btn-login {
+		width: 100px;
+		height: 35px;
+		
+		padding: 0;
+
+		letter-spacing: 2px;
+
+		-webkit-text-shadow: 0px -1px 0px #168be1;
+		text-shadow: 0px -1px 0px #168be1;
+		color: #ffffff;
+
+		background-color: #34A9FF;
+		
+		border-width: 1px;
+		border-style: solid;
+		border-color: #34A9FF #168be1 #168be1 #34A9FF;
+		border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.25);
+
+		.set-radius(2px);
+
+		&:hover {
+			background-color: #168be1;
+		}
+	}
+
+	.btn:focus {
+		color: #98ffff;
+		
+		border-color: #34A9FF #168be1 #168be1 #34A9FF;
+		border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.25);
+
+		.set-shadow( inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05) );
+	}
+
+	.btn.active, .btn:active {
+		background-image: none;
+		color: #98ffff;
+
+		.set-shadow( inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05) );
+	}
+	// end .btn
+
+	#alerts {
+		width: 100%;
+		
+		position: absolute;
+		bottom: -45px;
+
+		.alert {
+			text-align: center;
+		}
+	}
+}
