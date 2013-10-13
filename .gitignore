@@ -32,4 +32,5 @@ _ReSharper*/
 *.[Rr]e[Ss]harper
 
 obj/
+*Web/bin/*
 packages/*
