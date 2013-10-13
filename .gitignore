@@ -32,5 +32,6 @@ _ReSharper*/
 *.[Rr]e[Ss]harper
 
 obj/
+Files/PSD/*
 *Web/bin/*
 packages/*

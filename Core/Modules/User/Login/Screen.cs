@@ -7,7 +7,7 @@ namespace Core.User.Login {
 			Name = "Login";
 			Caption = "Login";
 
-			Index = 0;
+			IsInternal = true;
 		}
 
 		public static Screen Instance {

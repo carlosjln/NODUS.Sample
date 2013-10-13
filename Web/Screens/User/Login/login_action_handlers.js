@@ -5,6 +5,43 @@ var password;
 
 var login_button;
 var loading_status;
+var request_status;
+
+// var alerts;
+var alert;
+
+var Form = {
+	enhance: function( form ) {
+		form.find("input").on( "focus", function( evt ) {
+			// console.log( $(this).parent(".input") );
+		} );
+		
+//		$('[placeholder]').focus(function() {
+//			var input = $(this);
+//			
+//			if (input.val() == input.attr('placeholder')) {
+//				input.val('');
+//				input.removeClass('placeholder');
+//			}
+//		}).blur( function() {
+//			var input = $(this);
+//			
+//			if (input.val() == '' || input.val() == input.attr('placeholder')) {
+//				input.addClass('placeholder');
+//				input.val( input.attr('placeholder') );
+//			}
+//		}).blur();
+//		
+//		$('[placeholder]').parents('form').submit(function() {
+//			$(this).find('[placeholder]').each(function() {
+//				var input = $(this);
+//				if (input.val() == input.attr('placeholder')) input.val('');
+//			});
+//		});
+	}
+};
+
+window.Form = Form;
 
 Handle.templates = {
 	main : {
@@ -12,33 +49,37 @@ Handle.templates = {
 			$('body').html( template.html );
 			
 			var login = $('#login');
-			login_button = login.find(".login-authenticate-user");
+			Form.enhance(login);
+			
+			login_button = login.find("button[type=submit]");
 			
 			form = $('form');
-			form.on( 'submit', form_handler );
-		
+			form.on( 'submit', submit_handler );
+			
 			username = $('#username');
 			password = $('#password');
 			
-			var action_buttons = $('#action-buttons');
-			var status = $('.notify-request-status').first();
+			var Alert = nodus.ui.alert;
+			alert = new Alert( { type: Alert.TYPE.Warning, target: $('#alerts').get(0) } ).hide();
+			
+			request_status = $('.request-status');
 			
 			loading_status = {
 				show: function() {
-					action_buttons.hide();
-					status.show();
+					login_button.hide();
+					request_status.show();
 				},
 				hide: function() {
-					action_buttons.show();
-					status.hide();
+					login_button.show();
+					request_status.hide();
 				}
 			};
 			
 			set_focus( username );
 			
 			///#DEBUG
-			username.value = 'carlos';
-			password.value = '123456';
+			// username.val('carlos');
+			// password.val('123456');
 			// login_button.trigger('click');
 			///#ENDDEBUG
 			
@@ -52,8 +93,8 @@ Handle.templates = {
 Handle.actions = {
 	authenticate_user : {
 		get_params: function() {
-			var password_value = password.value;
-			return 'username=' + username.value + '&password=' + (password_value ? SHA256(password_value): "");
+			var password_value = password.val();
+			return 'username=' + username.val() + '&password=' + (password_value ? SHA256(password_value): "");
 		},
 		
 		on_request: on_request,
@@ -86,27 +127,20 @@ function exception( errors ) {
 	var application = errors.application;
 	var error = validation[0];
 	
-	if (application.length) return display_appication_error();
+	if (application.length) {
+		console.log( application[0].message );
+		alert.message( "Ups! something went wrong. Please try again." ).show();
+		return;
+	}
 	
 	if( validation.length == 0 || error == null ) return null;
 	
-	display_validation_error( error.message );
+	alert.message( error.message ).show();
 	
-	set_focus( "#"+error.field );
+	set_focus( form.find( "[name="+ error.field +"]") );
 }
 
-function form_handler( e ){
+function submit_handler( e ){
 	e.preventDefault();
 	login_button.trigger("click");
-}
-
-function display_validation_error( message ) {
-	var notification = $( Notify.warning( message ) ).css("text-align: center");
-	$('#display-validation-errors').empty().insert( notification );
-}
-
-function display_appication_error() {
-    var message = 'Usuario o contraseña incorrecta.';
-    var notification = $( Notify.warning(message)).css("text-align: center");
-    $('#display-application-erros').empty().insert(notification);
 }
