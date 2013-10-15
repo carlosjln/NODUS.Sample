@@ -65,11 +65,11 @@
   <ItemGroup>
     <Compile Include="Entities\User.cs" />
     <Compile Include="ModuleInfo.cs" />
-    <Compile Include="Modules\User\Dashboard\Screen.cs" />
-    <Compile Include="Modules\User\Login\AuthenticateUser.cs" />
-    <Compile Include="Modules\User\Login\Credentials.cs" />
-    <Compile Include="Modules\User\Login\Screen.cs" />
-    <Compile Include="Modules\User\Screen.cs" />
+    <Compile Include="Nodes\User\Dashboard\Screen.cs" />
+    <Compile Include="Nodes\User\Login\AuthenticateUser.cs" />
+    <Compile Include="Nodes\User\Login\Credentials.cs" />
+    <Compile Include="Nodes\User\Login\Screen.cs" />
+    <Compile Include="Nodes\User\Screen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsInitializer.cs" />
   </ItemGroup>
