@@ -14,7 +14,7 @@ namespace Core.User.Login {
 			// TODO: implement the authentication mechanism of your choice
 			// further examples will include MongoDB, MS SQL and Active Directory authentication
 
-			if( !Username.is_not_empty( ) || !Password.is_not_empty( ) ) return null;
+			if( Username.is_empty() || Password.is_empty() ) return null;
 
 			var user = new Entities.User {
 				Modules = get_all_avaliable_modules( )
