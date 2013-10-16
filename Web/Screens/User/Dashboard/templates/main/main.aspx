@@ -24,12 +24,12 @@
 <div class="left-sidebar">
 	<ul class="action-bar clearfix">
 		<li>
-			<a tab-name="padron" class="screen-action" data-screen="<%=padron_screen_id%>">
+			<a tab-name="padron" class="screen-action" data-screen="">
 				<i class="icon-search"></i> Search
 			</a>				
 		</li>
 		<li>
-			<a tab-name="miembros" class="screen-action" data-screen="<%=miembro_screen_id%>">
+			<a tab-name="miembros" class="screen-action" data-screen="">
 				<i class="icon-book"></i> Books
 			</a>				
 		</li>
