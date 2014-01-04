@@ -119,7 +119,7 @@
     <Content Include="Resources\js\nodus.prototypes.min.js.map" />
     <Content Include="Resources\js\SHA256.min.js.map" />
     <Content Include="packages.config" />
-    <None Include="Properties\PublishProfiles\nodus-sample.js-hack.net - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\nodus-sample.othersoft-inc.com - Web Deploy.pubxml" />
     <None Include="Resources\plugin\jquery\jquery-1.7.1-vsdoc.js" />
     <Content Include="Resources\plugin\jquery\jquery-1.7.1.js" />
     <Content Include="Resources\plugin\jquery\jquery-1.7.1.min.js" />

@@ -25,6 +25,8 @@ server.txt
 *.mswwsettings
 *.nupkg
 *.nuspec
+*.publishsettings
+*.pubxml
 
 [Dd]ebug*/
 [Rr]elease*/
